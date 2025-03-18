@@ -1,0 +1,28 @@
+.container{
+    border: solid 1px;
+    text-align: center;
+}
+.container div{
+    padding: 20px;
+    
+}
+input{
+    width: 60%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#createTask{
+
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+.tasks{
+    border: solid 1px;
+}
+
+span{
+    padding-right: 80%;
+}
