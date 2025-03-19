@@ -19,10 +19,25 @@ input{
     
 }
 
+.btnActions{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.taskList{
+ 
+    display: flex;
+    flex-direction: column;
+
+}
+
 .tasks{
     border: solid 1px;
+    display: flex;
+    flex-direction: row;
 }
 
 span{
     padding-right: 80%;
+
 }
