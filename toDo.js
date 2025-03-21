@@ -27,9 +27,17 @@ btnDeleteTask.setAttribute('class', 'btnActions');
 btnDeleteTask.innerText = 'Delete';
 
 
+var btnCompleteTask = document.createElement("button");
+btnCompleteTask.setAttribute('class', 'btnActions');
+btnCompleteTask.innerText = 'Complete';
+
+
 taskList.appendChild(newDiv);
 
-taskSpan.appendChild(btnDeleteTask)
+newDiv.append(btnDeleteTask);
+
+newDiv.append(btnCompleteTask);
+
 
 }
 

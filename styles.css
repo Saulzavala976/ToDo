@@ -34,7 +34,7 @@ input{
 .tasks{
     border: solid 1px;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
 span{
