@@ -35,9 +35,14 @@ input{
     border: solid 1px;
     display: flex;
     justify-content: space-between;
+    padding: 0;
 }
 
 span{
     padding-right: 80%;
 
+}
+
+.tasks button{
+    left: 30%;
 }

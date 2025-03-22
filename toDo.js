@@ -5,45 +5,35 @@ const taskSpan = document.querySelector(".tasks");
 const taskList = document.querySelector(".taskList");
 
 btnCreateTask.addEventListener("click", function (e) {
+  e.preventDefault;
+  createTask(taskInput.value);
 
-    e.preventDefault;
-    createTask(taskInput.value);
+  console.log(taskInput.value);
+  taskInput.value = "";
+});
 
-    console.log(taskInput.value);
-    taskInput.value='';
-    
-})
+function createTask(newTask) {
+  //create new task
+  var newDiv = document.createElement("span");
+  newDiv.setAttribute("class", "tasks");
+  newDiv.innerHTML = newTask;
 
+  var btnDeleteTask = document.createElement("button");
+  btnDeleteTask.setAttribute("class", "btnActions");
+  btnDeleteTask.innerText = "Delete";
 
-function createTask(newTask) {    
+  var btnCompleteTask = document.createElement("button");
+  btnCompleteTask.setAttribute("class", "btnActions");
+  btnCompleteTask.innerText = "Complete";
 
-//create new task 
-var newDiv = document.createElement("span");
-newDiv.setAttribute('class','tasks');
-newDiv.innerHTML = newTask;
+  taskList.appendChild(newDiv);
 
-var btnDeleteTask = document.createElement("button");
-btnDeleteTask.setAttribute('class', 'btnActions');
-btnDeleteTask.innerText = 'Delete';
+  newDiv.append(btnDeleteTask);
 
-
-var btnCompleteTask = document.createElement("button");
-btnCompleteTask.setAttribute('class', 'btnActions');
-btnCompleteTask.innerText = 'Complete';
-
-
-taskList.appendChild(newDiv);
-
-newDiv.append(btnDeleteTask);
-
-newDiv.append(btnCompleteTask);
-
-
+  newDiv.append(btnCompleteTask);
 }
 
-function deleteTask() {
-    
-}
-function completeTask() {
-    
+function deleteTask() {}
+function completeTask(task) {
+  alert(`Task ${task} completed`);
 }
